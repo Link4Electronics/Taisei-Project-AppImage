@@ -17,6 +17,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
+  make-aur-package cglm
 # Comment this out if you need an AUR package
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
   make-aur-package taisei-git
