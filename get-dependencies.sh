@@ -18,10 +18,11 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
+make-aur-package cglm
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
-  make-aur-package cglm taisei-git
+  make-aur-package taisei-git
 else
-  make-aur-package cglm taisei
+  make-aur-package taisei
 fi
 
 # If the application needs to be manually built that has to be done down here
