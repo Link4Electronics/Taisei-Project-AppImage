@@ -6,7 +6,12 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
+pacman -Syu --noconfirm \
+    sdl3     \
+    cglm     \
+    libzip   \
+    mimalloc \
+    opusfile
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
