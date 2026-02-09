@@ -19,8 +19,20 @@ get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
 make-aur-package cglm
+
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
   make-aur-package taisei-git
+  echo "Making nightly build of dethrace..."
+  echo "---------------------------------------------------------------"
+  REPO="https://github.com/taisei-project/taisei"
+  VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
+  git clone --recursive --depth 1 "$REPO" ./taisei
+  echo "$VERSION" > ~/version
+
+  cd ./taisei
+  meson setup --prefix /usr --libexecdir lib --sbindir bin --buildtype plain --wrap-mode nodownload -D b_lto=true -D b_pie=true build
+  meson compile -C build
+  meson install -C build
 else
   make-aur-package taisei
 fi
