@@ -7,6 +7,9 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
+    boost    \
+    glad     \
+    glslang  \
     sdl3     \
     libzip   \
     mimalloc \
