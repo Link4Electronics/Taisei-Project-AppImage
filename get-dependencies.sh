@@ -25,8 +25,9 @@ get-debloated-pkgs --add-common --prefer-nano
 make-aur-package cglm
 REPO="https://github.com/taisei-project/taisei"
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
-  make-aur-package taisei-git
+	package=taisei-git
 else
-make-aur-package taisei
-
+	package=taisei
 fi
+make-aur-package "$package"
+pacman -Q "$package" | awk '{print $2; exit}' > ~/version
