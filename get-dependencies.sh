@@ -17,7 +17,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-
+# Manually build cglm
 wget https://github.com/recp/cglm/archive/v0.9.6.tar.gz
 tar -xvf cglm-0.9.6.tar.gz
 rm -f *.gz
