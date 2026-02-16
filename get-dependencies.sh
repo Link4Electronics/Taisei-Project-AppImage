@@ -13,7 +13,8 @@ pacman -Syu --noconfirm \
     sdl3     \
     libzip   \
     mimalloc \
-    opusfile
+    opusfile \
+    shaderc
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
