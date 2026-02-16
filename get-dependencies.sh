@@ -19,17 +19,6 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Manually build cglm
-#wget https://github.com/recp/cglm/archive/v0.9.6.tar.gz
-#tar -xvf cglm-0.9.6.tar.gz
-#rm -f *.gz
-#cd cglm-0.9.6
-#cmake -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
-#cmake --build build --config release
-#make -C build install
-#mkdir -p /usr/lib/pkgconfig
-#mv -v build/cglm.pc /usr/lib/pkgconfig
-
 
 # Comment this out if you need an AUR package
 make-aur-package cglm
