@@ -11,6 +11,7 @@ pacman -Syu --noconfirm \
     glad     \
     glslang  \
     sdl3     \
+    libdecor \
     libzip   \
     mimalloc \
     opusfile \
