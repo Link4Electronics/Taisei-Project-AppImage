@@ -17,19 +17,28 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Comment this out if you need an AUR package
 
+wget https://github.com/recp/cglm/archive/v0.9.6.tar.gz
+tar -xvf cglm-0.9.6.tar.gz
+rm -f *.gz
+cd cglm-0.9.6
+cmake -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+cmake --build build --config release
+make -C build install
+mkdir -p /usr/lib/pkgconfig
+mv -v build/cglm.pc /usr/lib/pkgconfig
+
+
+# Comment this out if you need an AUR package
 
 REPO="https://github.com/taisei-project/taisei"
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
-  make-aur-package cglm
   make-aur-package taisei-git
 #  echo "Making nightly build of Taisei-Project..."
 #  echo "---------------------------------------------------------------"
 #  VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
 #  git clone --recursive --depth 1 "$REPO" ./taisei
 else
-make-aur-package cglm
 make-aur-package taisei
 #  echo "Making stable build of Taisei-Project..."
 #  echo "---------------------------------------------------------------"
@@ -44,11 +53,3 @@ fi
 #  meson install -C build
 
 # If the application needs to be manually built that has to be done down here
-
-# if you also have to make nightly releases check for DEVEL_RELEASE = 1
-#
-# if [ "${DEVEL_RELEASE-}" = 1 ]; then
-# 	nightly build steps
-# else
-# 	regular build steps
-# fi
