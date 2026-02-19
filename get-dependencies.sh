@@ -23,7 +23,7 @@ get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
 make-aur-package cglm
-REPO="https://github.com/taisei-project/taisei"
+
 if [ "${DEVEL_RELEASE-}" = 1 ]; then
 	package=taisei-git
 else
