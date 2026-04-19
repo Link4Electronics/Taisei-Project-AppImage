@@ -11,7 +11,7 @@
 </p>
 
 
-| Latest Stable Release | Latest Nightly Relase | Upstream URL |
+| Latest Stable Release | Latest Nightly Release | Upstream URL |
 | :---: | :---: | :---: |
 | [Click here](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/latest) | [Click here](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/tag/nightly) | [Click here](https://github.com/taisei-project/taisei) |
 
