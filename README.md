@@ -3,7 +3,7 @@
 # Taisei-Project-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Taisei-Project-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/Taisei-Project-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/Taisei-Project-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/latest)
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Taisei-Project-AppImage)](https://github.com/pkgforge-dev/Taisei-Project-AppImage/releases/latest)
 
 <p align="center">
