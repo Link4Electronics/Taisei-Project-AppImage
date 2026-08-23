@@ -10,16 +10,15 @@ pacman -Syu --noconfirm \
     boost    \
     glad     \
     glslang  \
-    sdl3     \
-    libdecor \
     libzip   \
     mimalloc \
     opusfile \
+	sdl3     \
     shaderc
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini opus-mini
 
 # Comment this out if you need an AUR package
 make-aur-package cglm
